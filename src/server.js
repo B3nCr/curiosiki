@@ -15,7 +15,7 @@ app.set('views', __dirname + '/views');
 app.get('/', function (req, res) {
     res.render('index', {
         content: null,
-        searchterm: 'Curiosiki',
+        searchterm: 'Curiousiki',
         digValue: null
     });
 });
@@ -42,7 +42,7 @@ app.post("/", function (req, res) {
 app.get('/about', function (req, res) {
     res.render('about', {
         content: null,
-        searchterm: 'Curiosiki',
+        searchterm: 'Curiousiki',
         digValue: null
     });
 });
@@ -51,7 +51,7 @@ app.get('/about', function (req, res) {
 app.get('/blank', function (req, res) {
     res.render('index', {
         content: null,
-        searchterm: 'Curiosiki',
+        searchterm: 'Curiousiki',
         digValue: null
     });
 });
