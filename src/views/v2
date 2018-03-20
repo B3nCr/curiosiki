@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Curiousiki V2</title>
+<link href="FIRST CRACK CSS.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+<link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:800i" rel="stylesheet"> 
+
+
+<div class="wrapper" style="height:100vh";
+>
+      <div class="backg1"></div>
+      <div class="backg2"></div>
+      <div class="backg3"></div>
+	  <div class="backg4"></div>
+      
+
+									<!-SEARCH BAR>
+  <div class="one"> 
+  <div>
+  <div style="width:100vw; overflow-x: hidden;">   
+  </div>
+  </div></div>
+  
+  <div class="srchbox">
+   <input type="text" name="frmSearch" autofocus="autofocus" placeholder="-CURIOUSIKI-" 
+    style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(3.8vmax + 0.4vmax); font-weight: bolder; 
+    text-indent: 1vw;
+    height: auto; width: 53.5vw;
+    border: 0pt; background: #000000; color: #f0f0c3; border-radius: 0; padding: none;
+    -webkit-appearance: none; appearance: none;"
+value="{{searchterm}}" /> 
+  
+  </div>
+  
+  									<!-SIDEBAR LEFT>
+  <div class="two"></div>
+
+
+								<!-MAIN WIKI BODY>
+  <div class="three"><div style="border:none; max-height:61.8vh; overflow-y:scroll; overflow-x:hide;  padding-left: 2vw; padding-right: 2vw; padding-bottom: 1vh; align:justify; margin:1vw; text-align:justify">
+<p style="height:auto;">
+ {{#content}}
+                        <p> {{text}}</p>
+                        {{/content}}
+                         {{^content}}
+                        <div align="center">
+                            <img src="/img/fortune.gif" width="400" height="400" align="middle" />
+                        </div>
+{{/content}}
+</div></div>
+
+
+									<!-TWITTER BOX>
+  <div class="four">
+  <div style="padding-left: 2vw; padding-right: 2vw; padding-bottom: 1vh; padding-top: 1vh; align:justify; margin:1vw; text-align:justify">
+  Nunc luctus, urna vel rutrum mollis, neque nibh mollis metus, a bibendum magna sapien consequat elit.</div></div>
+  
+  									<!-OTHER BOX>
+  <div class="five">
+  <div style="padding-left: 2vw; padding-right: 2vw; padding-bottom: 1vh; padding-top: 1vh; align:justify; margin:1vw; text-align:justify">Phasellus eget nibh a ante egestas elementum.</div></div>
+  
+  
+  									<!-IMG BOX>
+  <div class="six">
+     <div style="border:none; max-height:74vh; overflow-y:scroll; overflow-x:hide;     
+   ">
+<p style="height:auto;"><div class="filtered">
+  <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Jon_Snow-Kit_Harington.jpg">
+  <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Jon_Snow-Kit_Harington.jpg">
+  <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Jon_Snow-Kit_Harington.jpg">    
+  
+  
+  
+</div>
+  </div></div>
+  
+  
+ 									<!-SIDEBAR RIGHT>
+  <div class="seven">
+  
+  </div>
+  
+  								  	<!-FOOTER>
+  <div class="eight">	
+  
+  </div>
+</div>
+
+
+</body>
+</html>
