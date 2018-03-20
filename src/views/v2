@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Curiousiki V2</title>
-<link href="FIRST CRACK CSS.css" rel="stylesheet" type="text/css" />
+<link href="curiosiki/src/views/v2CSS" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
