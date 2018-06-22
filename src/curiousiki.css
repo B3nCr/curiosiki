@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+margin:0 0 0 0;
+padding:0;
+background: #f0f0c3;
+font-family: 'Cardo', sans-serif;
+	font-size: calc(3.8xmax + 0.4vmax);
+}	
+{box-sizing: border-box;}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(18vw 14vw 14vw 8vw 14vw 14vw 18vw);
+  grid-gap: 1vw;
+ grid-template-rows: [linename1] 1fr [linename2] 0.5fr [linename3] 0.5fr [linename4] 6fr [linename5] 0.5fr [linename6] 0.5fr [linename7] 1fr ;
+position: absolute;
+width: 100vw;
+height: 100vh;
+overflow-x: hidden;
+}
+
+/*BUTTONS*/
+
+ 
+ .SURF { 
+ }
+ 
+  
+ .DIG { 
+ }
+ 
+  
+ .SRCH { 
+ }
+ 
+  
+ .BODYM {
+  grid-column: 2 / 7 ;
+  grid-row: 3 / 6 ; 
+ }
+ 
+ 
+/*BACKGROUND*/
+ 
+ .BODY {
+  grid-column: 2 / 7 ;
+  grid-row: 1 / 8 ;
+  border:1vw solid black; border-top:none; border-bottom:none; 
+ }
+  .BODYTOP {
+  grid-column: 2 / 7 ;
+  grid-row: 3 / 6 ;
+  border:1vw solid black; border-left:none; border-right:none; 
+ }
+  .SEARCHBG1 {
+  grid-column: 1 / 8 ;
+  grid-row: 1 / 2 ;
+  background: #000000; 
+ }
+  .SEARCHBG3 {
+  grid-column: 1 / 8 ;
+  grid-row: 7 / 8 ;
+  background: #000000; 
+ }
+ 
+
+ 
+ 
