@@ -1,65 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Curiosiki</title>
-    <style type="text/css">
-        .arial {
-	font-family: Arial Black, Gadget, sans-serif;
-	font-size: 12px;
-	text-transform: uppercase;
-	font-style: normal;
-	text-align: justify;
-		background: #f0f0c3;
-        }
-
-        .arial div p {
-            color: #666;
-        }
-
-        .arial div table tr td p strong {
-            color: #000;
-        }
-
-        .arial div table tr td p {
-            color: #000;
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Curiousiki</title>
+<link href="CURIOUSIKI.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="arial">
-<div align="center">
-        <p>
-       
-  <form method="POST">
+<body>
 
-    <input type="text" name="frmSearch" style="font-face: Arial Black, Gadget, sans-serif; text-transform: uppercase; font-size : 14px; width: 250px; height: 25px; font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px;" value="{{searchterm}}" />
-    
-                <input type="submit"  style="font-face: Arial Black, Gadget, sans-serif; text-transform: uppercase; font-size : 14px; width: 60px; height: 27px; text-align: center; font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3;" value="SURF" />
-                </p>
-        </form>
-        
-           <div style="border:none;width:550px;height:450px;overflow-y:scroll;overflow-x:hide;">
+<div class="wrapper" style="height:100vh">
+
+<div class="SEARCHBG1"></div>
+<div class="SEARCHBG3"></div>
+<div class="SEARCHBG2"></div>
+
+<div class="BODY"></div>
+<div class="BODYTOP"></div>
+<div class="BODY3"></div>
+
+<div class="BODYM">
+			         <div style="border:none; width:100%; max-height:1--% ; overflow-y:scroll; overflow-x:hide; min-width: 100%; min-height: 61.8vh; margin-bottom: 2%; padding-bottom: 2%;">
 <p style="height:auto;">
-                <td width="122">
+                
               <div align="justify">
               
            {{wikicontent}} 
               
               
-               </div></td>
-              
-           
-</div>
-        <form method="POST">
-          <p>
-            <input type="hidden" name="frmSearch" value="{{dugterm}}" />
-            <input type="submit" style="font-face: Arial Black, Gadget, sans-serif; text-transform: uppercase; font-size :14px; width: 60px; height: 27px; text-align: center; font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3;" value="DIG" />
-          </p>
-  </form>
-    <p>&nbsp;</p>
+             </div></div></div>
+
+
+
 </div>
 </body>
-
 </html>
