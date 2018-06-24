@@ -126,8 +126,8 @@
 </head>
 
 <body>
-  <form method="POST">
 
+  <form method="POST">
     <div class="wrapper" style="height:100vh">
 
       <div class="GRIDBOX1">
@@ -193,20 +193,24 @@ border-radius: 0;  " value="SURF" />
         </div>
       </div>
 
-      <div class="DIG">
-        <div align="center">
-          <div style="vertical-align:middle">
-            <p>
-              <input type="hidden" name="frmSearch" value="{{dugterm}}" />
-              <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
+  </form>
+
+  
+  <div class="DIG">
+    <div align="center">
+      <div style="vertical-align:middle">
+        <p>
+          <form method="POST">
+            <input type="hidden" name="frmSearch" value="{{dugterm}}" />
+            <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
                border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw; -webkit-appearance: none; appearance: none;
 border-radius: 0;  " value="DIG" />
-            </p>
-          </div>
-        </div>
+          </form>
+        </p>
       </div>
+    </div>
+  </div>
 
-  </form>
 </body>
 
 </html>

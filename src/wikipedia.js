@@ -17,15 +17,15 @@ methods.search = function (query) {
             if (data.type === "page") {
 
                 console.log("Number of sections: " + data.sections.length);
-                console.log(JSON.stringify(data));
+                // console.log(JSON.stringify(data));
 
                 data.sections.forEach(function (section) {
 
-                    console.log("Section title: " + section.title);
+                    // console.log("Section title: " + section.title);
 
                     section.sentences.forEach(function (sentence) {
 
-                        console.log("Sentence: " + sentence.text);
+                        // console.log("Sentence: " + sentence.text);
 
                         if (sentence.text != null && sentence.text != "") {
                             sentences.push(sentence);
@@ -34,6 +34,7 @@ methods.search = function (query) {
                         }
 
                         links = _.concat(links, _.map(sentence.links, "page"));
+
                     });
 
                     if (sentences.length > 0) {
@@ -51,12 +52,14 @@ methods.search = function (query) {
                 console.log("Didn't find a page. Got some other response.\r\n");
                 reject("Didn't find a page.")
             }
-
-            fulfill({
+            
+            var result = {
                 content: sentences,
                 selectedLink: digValue,
                 links: links
-            })
+            };
+
+            fulfill(result);
         });
     });
 }

@@ -23,6 +23,9 @@ app.get('/', function (req, res) {
 app.post("/", function (req, res) {
 
     formBody(req, {}, function (err, body) {
+        
+        console.log("Form Body: " + JSON.stringify(body));
+
         var query = body.frmSearch;
 
         if (body.frmSearch == null || body.frmSearch === "" || body.frmSearch.toUpperCase() === "CURIOUSIKI") {
@@ -31,9 +34,15 @@ app.post("/", function (req, res) {
         }
 
         var wikipedia = require('./wikipedia');
+
+        console.log("searching...");
         wikipedia.search(query).then(function (pageData) {
+
+            console.log("Dug Term: " + pageData.selectedLink);
+
             res.render("index", _.assignIn(pageData, {
-                searchterm: query
+                searchterm: query,
+                dugterm: pageData.selectedLink
             }));
         });
     });
