@@ -122,7 +122,12 @@ background: #000;
 
 <input type="text" name="frmSearch" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder; 
     			font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center " value="{{searchterm}}" />
-                
+
+<script type="text/javascript">
+$(document).ready(function(){
+document.homeform.input.focus();
+});
+</script>                
 </form>
 </div>
 
@@ -174,9 +179,10 @@ background: #000;
 <div class="SURF">
 <div align="center">
 <div style="vertical-align:middle">
-
+  <p>
     <input type="submit"  style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
                border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw;  " value="SURF" />
+	       </p>
 </form>
 </div>
 </div>
@@ -185,11 +191,13 @@ background: #000;
 <div class="DIG">
 <div align="center">
 <div style="vertical-align:middle">
-        <form method="POST">
+   <p>   
+      <form method="POST">
             <input type="hidden" name="frmSearch" value="{{dugterm}}" />
             <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
                border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw;  " 
 value="DIG" />
+</p>
 </form>
 </div>
 </div>
