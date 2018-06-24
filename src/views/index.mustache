@@ -27,7 +27,7 @@
 </div>
 
 <div class="SRCH">
-<form method="POST">
+<form method="POST" action="/">>
 
 <input type="text" name="frmSearch" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder; 
     			font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center " value="{{searchterm}}" />
@@ -101,7 +101,7 @@ document.homeform.input.focus();
 <div align="center">
 <div style="vertical-align:middle">
         <form method="POST">
-            <input type="hidden" name="frmSearch" value="{{dugterm}}" />
+            <input type="hidden" name="frmSearch" value="{{selectedLink}}" />
             <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
                border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw;  " 
 value="DIG" />
