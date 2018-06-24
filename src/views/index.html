@@ -16,7 +16,7 @@
       background: #f0f0c3;
       font-family: 'Cardo', sans-serif;
       font-size: calc(3.8xmax + 0.4vmax);
-    
+
       box-sizing: border-box;
     }
 
@@ -118,96 +118,95 @@
       opacity: 1;
     }
   </style>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("frmSearch").focus();
+    });
+  </script>
 </head>
 
 <body>
+  <form method="POST">
 
-  <div class="wrapper" style="height:100vh">
+    <div class="wrapper" style="height:100vh">
 
-    <div class="GRIDBOX1">
-    </div>
-    <div class="GRIDBOX2">
-    </div>
-    <div class="GRIDBOX3">
-    </div>
-    <div class="GRIDBOX4">
-    </div>
-    <div class="GRIDBOX5">
-    </div>
+      <div class="GRIDBOX1">
+      </div>
+      <div class="GRIDBOX2">
+      </div>
+      <div class="GRIDBOX3">
+      </div>
+      <div class="GRIDBOX4">
+      </div>
+      <div class="GRIDBOX5">
+      </div>
 
-    <div class="HDR">
-    </div>
-    <div class="FTR">
-    </div>
+      <div class="HDR">
+      </div>
+      <div class="FTR">
+      </div>
 
-    <div class="SRCH">
-      <form method="POST">
+      <div class="SRCH">
 
         <input type="text" name="frmSearch" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder; 
     			font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center; -webkit-appearance: none; appearance: none;
 border-radius: 0;  " value="{{searchterm}}" />
 
-        <script type="text/javascript">
-          $(document).ready(function () {
-            $("frmSearch").focus();
-          });
-        </script>
-      </form>
-    </div>
 
-    <div class="BODY">
-      <div align="center">
+      </div>
 
-        <div style="border:none; width:85%; max-height:55vh ; overflow-y:scroll; overflow-x:hide; min-width: 309px; min-height: 55vh; margin-bottom: 15%; padding-bottom: 2%;">
-          <p style="height:auto;">
+      <div class="BODY">
+        <div align="center">
 
-            <div align="justify">
-              <div class="filtered">
+          <div style="border:none; width:85%; max-height:55vh ; overflow-y:scroll; overflow-x:hide; min-width: 309px; min-height: 55vh; margin-bottom: 15%; padding-bottom: 2%;">
+            <p style="height:auto;">
+
+              <div align="justify">
+                <div class="filtered">
 
 
-                {{#content}}
-                <p> {{text}}</p>
-                {{/content}} {{^content}}
-                <div align="center">
-                  <img src="/img/fortune.gif" width="400" height="400" align="middle" />
+                  {{#content}}
+                  <p> {{text}}</p>
+                  {{/content}} {{^content}}
+                  <div align="center">
+                    <img src="/img/fortune.gif" width="400" height="400" align="middle" />
+                  </div>
+                  {{/content}}
+
+
+
                 </div>
-                {{/content}}
-
-
-
               </div>
-            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="SURF">
-      <div align="center">
-        <div style="vertical-align:middle">
-          <p>
-            <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
-               border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw; -webkit-appearance: none; appearance: none;
-border-radius: 0;  " value="SURF" />
-          </p>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="DIG">
-      <div align="center">
-        <div style="vertical-align:middle">
-          <p>
-            <form method="POST">
-              <input type="hidden" name="frmSearch" value="{{dugterm}}" />
+      <div class="SURF">
+        <div align="center">
+          <div style="vertical-align:middle">
+            <p>
               <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
                border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw; -webkit-appearance: none; appearance: none;
+border-radius: 0;  " value="SURF" />
+            </p>
+  </form>
+  </div>
+  </div>
+  </div>
+
+  <div class="DIG">
+    <div align="center">
+      <div style="vertical-align:middle">
+        <p>
+            <input type="hidden" name="frmSearch" value="{{dugterm}}" />
+            <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
+               border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw; -webkit-appearance: none; appearance: none;
 border-radius: 0;  " value="DIG" />
-          </p>
-          </form>
-        </div>
+        </p>
       </div>
     </div>
+  </div>
 
+  </form>
 </body>
 
 </html>
