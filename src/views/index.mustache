@@ -1,12 +1,103 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>CURIOUSIKI</title>
 
-<link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:800i" rel="stylesheet"> 
-<link href="curiosiki/src/views/4.css" rel="stylesheet" type="text/css" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CURIOSIKI</title>
+
+<link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:800i" rel="stylesheet">
+    <style type="text/css">
+     
+body{
+margin:0 0 0 0;
+padding:0;
+background: #f0f0c3;
+font-family: 'Cardo', sans-serif;
+	font-size: calc(3.8xmax + 0.4vmax);}	
+{
+	box-sizing: border-box;
+}
+/*grids ATTRIBUTES*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 16vw 34vw 34vw 16vw);;
+ grid-template-rows: [linename1] 6vh [linename2] 12vh [linename3] 64vh [linename4] 12vh [linename5] 6vh ;
+position: fixed;
+width: 100vw;
+height: 100vh;
+overflow-x: hidden;
+}
+
+
+.SRCH {
+  grid-column: 2 / 4 ;
+  grid-row: 2 ; 
+}
+.BODY {
+  grid-column: 2 / 4 ;
+  grid-row: 3 ; 
+}
+.SURF {
+  grid-column: 2 ;
+  grid-row: 4 ; 
+}
+.DIG {
+  grid-column: 3 ;
+  grid-row: 4 ; 
+}
+
+/*background ATTRIBUTES*/
+.GRIDBOX1 {
+grid-column: 2 / 4 ;
+grid-row: 2 / 5 ; 
+border:1vw solid black; border-top:none; border-bottom:none;
+}
+.GRIDBOX2 {
+grid-column: 2 ;
+grid-row: 4 ; 
+border:1vw solid black; border-bottom:none;
+}
+.GRIDBOX3 {
+grid-column: 3 ;
+grid-row: 4 ; 
+border:1vw solid black; border-bottom:none;
+}
+.GRIDBOX4 {
+grid-column: 2 / 4 ;
+grid-row: 4 ; 
+border:1vw solid black; border-bottom:none; 
+}
+.GRIDBOX5 {
+grid-column: 2 / 4 ;
+grid-row: 2 ; 
+border:1vw solid black; border-bottom:none; 
+}
+.HDR {
+grid-column: 1 / 5 ;
+grid-row: 1 / 2 ; 
+background: #000; 
+}
+.FTR {
+grid-column: 1 / 5 ;
+grid-row: 5 / 6 ; 
+background: #000; 
+
+
+/*image ATTRIBUTES*/
+}
+.filtered {
+   background:#f0f0c3;
+}
+.filtered img {
+  mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(200%);
+  filter: grayscale(100%) contrast(200%);
+  opacity: 1;
+}
+    </style>
 </head>
+
 
 <div class="wrapper" style="height:100vh">
 
@@ -27,16 +118,10 @@
 </div>
 
 <div class="SRCH">
-<form method="POST" action="/">>
+<form method="POST">
 
 <input type="text" name="frmSearch" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder; 
     			font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center " value="{{searchterm}}" />
-                    
-<script type="text/javascript">
-$(document).ready(function(){
-document.homeform.input.focus();
-});
-</script>
                 
 </form>
 </div>
@@ -101,7 +186,7 @@ document.homeform.input.focus();
 <div align="center">
 <div style="vertical-align:middle">
         <form method="POST">
-            <input type="hidden" name="frmSearch" value="{{selectedLink}}" />
+            <input type="hidden" name="frmSearch" value="{{dugterm}}" />
             <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
                border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw;  " 
 value="DIG" />
