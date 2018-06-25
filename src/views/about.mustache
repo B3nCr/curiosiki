@@ -3,83 +3,233 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Curiousiki</title>
+  <title>CURIOSIKI</title>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:800i" rel="stylesheet">
   <style type="text/css">
-    .arial {
-      font-family: Arial Black, Gadget, sans-serif;
-      font-size: calc(7pt + 0.4vmax);
-      text-transform: uppercase;
-      font-style: normal;
-      text-align: justify;
+    body {
+      margin: 0 0 0 0;
+      padding: 0;
+      background: #f0f0c3;
+      font-family: 'Cardo', sans-serif;
+      font-size: calc(3.8xmax + 0.4vmax);
+
+      box-sizing: border-box;
     }
 
-    .arial div p {
-      color: #666;
+    /*grids ATTRIBUTES*/
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 16vw 34vw 34vw 16vw);
+      ;
+      grid-template-rows: [linename1] 6vh [linename2] 12vh [linename3] 64vh [linename4] 12vh [linename5] 6vh;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      overflow-x: hidden;
     }
 
-    .arial div table tr td p strong {
-      color: #000;
+
+    .SRCH {
+      grid-column: 2 / 4;
+      grid-row: 2;
     }
 
-    .arial div table tr td p {
-      color: #000;
+    .BODY {
+      grid-column: 2 / 4;
+      grid-row: 3;
+    }
+
+    .SURF {
+      grid-column: 2;
+      grid-row: 4;
+    }
+
+    .DIG {
+      grid-column: 3;
+      grid-row: 4;
+    }
+
+    /*background ATTRIBUTES*/
+
+    .GRIDBOX1 {
+      grid-column: 2 / 4;
+      grid-row: 2 / 5;
+      border: 1vw solid black;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    .GRIDBOX2 {
+      grid-column: 2;
+      grid-row: 4;
+      border: 1vw solid black;
+      border-bottom: none;
+    }
+
+    .GRIDBOX3 {
+      grid-column: 3;
+      grid-row: 4;
+      border: 1vw solid black;
+      border-bottom: none;
+    }
+
+    .GRIDBOX4 {
+      grid-column: 2 / 4;
+      grid-row: 4;
+      border: 1vw solid black;
+      border-bottom: none;
+    }
+
+    .GRIDBOX5 {
+      grid-column: 2 / 4;
+      grid-row: 2;
+      border: 1vw solid black;
+      border-bottom: none;
+    }
+
+    .HDR {
+      grid-column: 1 / 5;
+      grid-row: 1 / 2;
+      background: #000;
+    }
+
+    .FTR {
+      grid-column: 1 / 5;
+      grid-row: 5 / 6;
+      background: #000;
+
+
+      /*image ATTRIBUTES*/
+    }
+
+    .filtered {
+      background: #f0f0c3;
+    }
+
+    .filtered img {
+      mix-blend-mode: multiply;
+      -webkit-filter: grayscale(100%) contrast(200%);
+      filter: grayscale(100%) contrast(200%);
+      opacity: 1;
     }
   </style>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("frmSearch").focus();
+    });
+  </script>
 </head>
 
-<body class="arial">
-  <div align="center">
-    <p>
+<body>
 
-      <form method="POST" action="/">
+  <form method="POST">
+    <div class="wrapper" style="height:100vh">
 
-                <input type="text" name="frmSearch" autofocus="autofocus" placeholder="-CURIOUSIKI-" style="font-face: Arial Black, Gadget, sans-serif; text-transform: uppercase; font-size: calc(8pt + 0.4vmax); width: 23.6vw; height: 25pt; font-weight: bolder; border: 0pt; background-color: #000; color: #FFF; text-indent: 10px; min-width: 236px; -webkit-appearance: none; appearance: none;
-border-radius: 0; "
-value="{{searchterm}}" /> 
+      <div class="GRIDBOX1">
+      </div>
+      <div class="GRIDBOX2">
+      </div>
+      <div class="GRIDBOX3">
+      </div>
+      <div class="GRIDBOX4">
+      </div>
+      <div class="GRIDBOX5">
+      </div>
 
-<script type="text/javascript">
-$(document).ready(function(){
-  $("frmSearch").input.focus();
-});
-</script>
+      <div class="HDR">
+      </div>
+      <div class="FTR">
+      </div>
 
-                <input type="submit" style="font-face: Arial Black, Gadget, sans-serif; text-transform: uppercase; font-size: calc(8pt + 0.4vmax); width: 7.3vw; height: 26pt; text-align: center; font-weight: bolder; border: 0pt; background-color: #000; color: #FFF; min-width: 73px; -webkit-appearance: none; appearance: none;
-border-radius: 0; "
-value="SURF" />
+      <div class="SRCH">
 
-    </p>
-    </form>
-
-    <div style="border:none; width:61.8%; max-height:61.8vh ; overflow-y:scroll; overflow-x:hide; min-width: 309px; min-height: 61.8vh; margin-bottom: 2%; padding-bottom: 2%;">
-<p style="height:auto;">
-<div align="justify">
+        <input type="text" name="frmSearch" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder; 
+    			font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center; -webkit-appearance: none; appearance: none;
+border-radius: 0;  " value="{{searchterm}}" />
 
 
-            <p>The internet has gifted us with near unlimited access to the entire collective findings of mankind. But for all
-              the knowledge in the world, how much do we actually learn? </p>
-            <p>Learning once required research. Rummaging through information and finding the answers along the way. now, The
-              solution to any question is just one search away. THe Act of finding and digesting information has been replaced
-              by the instant gratification of a question answered.</p>
-            <p>the purpose of curiousiki is to reimagine the unlimited content of the internet under the focus of this process
-              using wikipedia's archives. Surf will allow you to search for your starting point. Dig will take you to your next page.</p>
-            <p>Surrender yourself to the information super highway and see where it takes you.</p>
-            <p></p>
-            <p>Curiousiki was created and developed by George Sarell and Ben Crinion. Copyright 2017.</p>
+      </div>
+
+      <div class="BODY">
+        <div align="center">
+
+          <div style="border:none; width:85%; max-height:55vh ; overflow-y:scroll; overflow-x:hide; min-width: 309px; min-height: 55vh; margin-bottom: 15%; padding-bottom: 2%;">
+            <p style="height:auto;">
+
+              <div align="justify">
+                <div class="filtered">
+
+
+                  {{#content}}
+                  <p> {{text}}</p>
+                  {{/content}} {{^content}}
+                  <div align="center">
+                    <p>The internet has gifted us with near unlimited access to the entire collective findings of mankind. But for all
+
+the knowledge in the world, how much do we actually learn? </p>
+
+<p>Learning once required research. Rummaging through information and finding the answers along the way. now, The
+
+solution to any question is just one search away. THe Act of finding and digesting information has been replaced
+
+by the instant gratification of a question answered.</p>
+
+<p>the purpose of curiousiki is to reimagine the unlimited content of the internet under the focus of this process
+
+using wikipedia's archives. Surf will allow you to search for your starting point. Dig will take you to your next page.</p>
+
+<p>Surrender yourself to the information super highway and see where it takes you.</p>
+
+<p></p>
+
+<p>Curiousiki was created and developed by George Sarell and Ben Crinion. Copyright 2017.</p>
+
+                  </div>
+                  {{/content}}
+
+
+
+                </div>
+              </div>
           </div>
+        </div>
+      </div>
+      <div class="SURF">
+        <div align="center">
+          <div style="vertical-align:middle">
+            <p>
+              <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
+               border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw; -webkit-appearance: none; appearance: none;
+border-radius: 0;  " value="SURF" />
+            </p>
 
+          </div>
+        </div>
+      </div>
+
+  </form>
+
+  
+  <div class="DIG">
+    <div align="center">
+      <div style="vertical-align:middle">
+        <p>
+          <form method="POST">
+            <input type="hidden" name="frmSearch" value="{{dugterm}}" />
+            <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
+               border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw; -webkit-appearance: none; appearance: none;
+border-radius: 0;  " value="DIG" />
+          </form>
+        </p>
+      </div>
     </div>
-    <form method="POST" action="/">
-      <p>
-      
-                <input type="hidden" name="frmSearch" value="{{selectedLink}}" />
-               <input type="submit" style="font-face: Arial Black, Gadget, sans-serif; text-transform: uppercase; font-size: calc(8pt + 0.4vmax); width: 7.3vw; height: 26pt; text-align: center; font-weight: bolder; border: 0pt; background-color: #000; color: #FFF; position:relative; min-width: 73px; -webkit-appearance: none; appearance: none;
-border-radius: 0; "
-value="DIG" />
-
-      </p>
-    </form>
-    <p>&nbsp;</p>
   </div>
+
 </body>
 
 </html>
