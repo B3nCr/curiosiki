@@ -122,9 +122,151 @@ margin-bottom: 15%; padding-bottom: 2%; margin-top:2%;
     
     
 
-@media (min-width: 750pt) { 
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+ 
+ 
+ 
+ 
+    /*grid ATTRIBUTES tablets*/
 
-    /*grid ATTRIBUTES desktop*/
+
+   
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 16vw 34vw 34vw 16vw);
+      ;
+      grid-template-rows: [linename1] 6vh [linename2] 12vh [linename3] 64vh [linename4] 12vh [linename5] 6vh;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+
+    .SRCH {
+      grid-column: 2 / 4;
+      grid-row: 2;
+    }
+
+    .BODY {
+      grid-column: 2 / 4;
+      grid-row: 3;
+    }
+
+    .SURF {
+      grid-column: 2;
+      grid-row: 4;
+    }
+
+    .DIG {
+      grid-column: 3;
+      grid-row: 4;
+    }
+
+    /*background ATTRIBUTES*/
+
+    .GRIDBOX1 {
+      grid-column: 2 / 4;
+      grid-row: 2 / 5;
+      border: 1vw solid black;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    .GRIDBOX2 {
+      grid-column: 2;
+      grid-row: 4;
+      border: 0.5vw solid black;
+      border-bottom: none;
+    }
+
+    .GRIDBOX3 {
+      grid-column: 3;
+      grid-row: 4;
+      border: 0.5vw solid black;
+      border-bottom: none;
+    }
+
+    .GRIDBOX4 {
+      grid-column: 2 / 4;
+      grid-row: 4;
+      border: 1vw solid black;
+      border-bottom: none;
+    }
+
+    .GRIDBOX5 {
+      grid-column: 2 / 4;
+      grid-row: 2;
+      border: 1vw solid black;
+      border-bottom: none;
+    }
+
+    .HDR {
+      grid-column: 1 / 5;
+      grid-row: 1 / 2;
+      background: #000;
+    }
+
+    .FTR {
+      grid-column: 1 / 5;
+      grid-row: 5 / 6;
+      background: #000;
+
+
+      /*image ATTRIBUTES 2*/
+    }
+
+    .filtered {
+      background: #f0f0c3;
+    }
+
+    .filtered img {
+      mix-blend-mode: multiply;
+      -webkit-filter: grayscale(100%) contrast(200%);
+      filter: grayscale(100%) contrast(200%);
+      opacity: 1;
+    }
+    .SURFBTN {
+    font-family:'Montserrat', sans-serif !important; 
+    text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-style: italic; font-weight: 900; 
+    border: 0pt; background-color: #000; color: #f0f0c3; width: 25vw; text-align: center; -webkit-appearance: none; appearance: none;
+border-radius: 0;
+    }
+    .SRCHBOX {
+    font-family:'Montserrat', sans-serif !important; 
+    text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-style: italic; font-weight: 900; 
+    border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center; -webkit-appearance: none; appearance: none;
+border-radius: 0; caret-color: #f0f0c3;
+}
+    .DIGBTN {
+    font-family:'Montserrat', sans-serif !important; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-style: italic; font-weight: 900;   
+    border: 0pt; background-color: #000; color: #f0f0c3; width: 25vw; text-align: center; -webkit-appearance: none; appearance: none;
+border-radius: 0;  
+}    
+.ORIGAMI {
+width: 50vh;
+height: auto;
+align: middle;
+}
+
+.BLKRKBTS {
+border:none; width:85%; max-height:55vh ; 
+overflow-y:scroll; overflow-x:hide; 
+min-width: 309px; min-height: 55vh; 
+margin-bottom: 15%; padding-bottom: 2%;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+
+
+    /*grid ATTRIBUTES standard*/
     
     .wrapper {
       display: grid;
