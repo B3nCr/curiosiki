@@ -216,7 +216,7 @@ border:1vw solid black; border-bottom:none; border-top:none;
 
         <input type="text" autofocus name="frmSearch" style="font-family:'Montserrat', sans-serif !important; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-style: italic; font-weight: 900; 
     			border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center; -webkit-appearance: none; appearance: none;
-border-radius: 0; onfocus="this.value = this.value;" value="{{searchterm}}";  />
+border-radius: 0; onfocus="var temp_value=this.value; this.value=''; this.value=temp_value"; value="{{searchterm}}";  />
 
 
       </div>
