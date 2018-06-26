@@ -7,16 +7,18 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-
-  <link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:800i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:400,900,900i" rel="stylesheet">
+  
   <style type="text/css">
+
+
     body {
       margin: 0 0 0 0;
       padding: 0;
       background: #f0f0c3;
       font-family: 'Cardo', sans-serif;
       font-size: calc(3.8xmax + 0.4vmax);
-
+-webkit-font-smoothing: subpixel-antialiased;
       box-sizing: border-box;
     }
 
@@ -148,9 +150,9 @@
 
       <div class="SRCH">
 
-        <input type="text" name="frmSearch" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder; 
-    			font-weight: bolder; border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center; -webkit-appearance: none; appearance: none;
-border-radius: 0;  autofocus="autofocus" value="{{searchterm}}" />
+        <input type="text" name="frmSearch" style="font-family:'Montserrat', sans-serif !important; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-style: italic; font-weight: 900; 
+    			border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center; -webkit-appearance: none; appearance: none;
+border-radius: 0; autofocus="autofocus" value="{{searchterm}}" />
 
 
       </div>
@@ -188,7 +190,6 @@ using wikipedia's archives. Surf will allow you to search for your starting poin
 <p></p>
 
 <p>Curiousiki was created and developed by George Sarell and Ben Crinion. Copyright 2017.</p>
-
                   </div>
                   {{/content}}
 
@@ -203,7 +204,7 @@ using wikipedia's archives. Surf will allow you to search for your starting poin
         <div align="center">
           <div style="vertical-align:middle">
             <p>
-              <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
+              <input type="submit" style="font-family:'Montserrat', sans-serif !important; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-style: italic; font-weight: 900; 
                border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw; -webkit-appearance: none; appearance: none;
 border-radius: 0;  " value="SURF" />
             </p>
@@ -221,7 +222,7 @@ border-radius: 0;  " value="SURF" />
         <p>
           <form method="POST">
             <input type="hidden" name="frmSearch" value="{{dugterm}}" />
-            <input type="submit" style="font-family:'Montserrat', sans-serif; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-weight: bolder;
+            <input type="submit" style="font-family:'Montserrat', sans-serif !important; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-style: italic; font-weight: 900;   
                border: 0pt; background-color: #000; color: #f0f0c3; width: 15vw; -webkit-appearance: none; appearance: none;
 border-radius: 0;  " value="DIG" />
           </form>
@@ -233,3 +234,4 @@ border-radius: 0;  " value="DIG" />
 </body>
 
 </html>
+
