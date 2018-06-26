@@ -29,7 +29,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 5vw 90vw 5vw );
- grid-template-rows: [linename6] 5% [linename7] 10% [linename8] 5% [linename9] 10% [linename10] 50% [linename11] 5% [linename12] 5%;
+ grid-template-rows: [linename6] 5% [linename7] 10% [linename8] 5% [linename9] 10% [linename10] 50% [linename11] 10% [linename12] 5%;
 position: fixed;
 width: 100vw;
 height: 100vh;
@@ -265,31 +265,6 @@ border-radius: 0;
 
       </div>
 
-      <div class="BODY">
-        <div align="center">
-
-          <div style="border:none; width:85%; max-height:55vh ; overflow-y:scroll; overflow-x:hide; min-width: 309px; min-height: 55vh; margin-bottom: 15%; padding-bottom: 2%;">
-            <p style="height:auto;">
-
-              <div align="justify">
-                <div class="filtered">
-
-
-                  {{#content}}
-                  <p> {{text}}</p>
-                  {{/content}} {{^content}}
-                  <div align="center">
-                    <img src="/img/fortune.gif" width="50%" height="50%" align="middle" />
-                  </div>
-                  {{/content}}
-
-
-
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
       <div class="SURF">
         <div align="center">
           <div style="vertical-align:middle">
@@ -316,6 +291,34 @@ border-radius: 0;
       </div>
     </div>
   </div>
+
+
+      <div class="BODY">
+        <div align="center">
+
+          <div style="border:none; width:85%; max-height:55vh ; overflow-y:scroll; overflow-x:hide; min-width: 309px; min-height: 55vh; margin-bottom: 15%; padding-bottom: 2%;">
+            <p style="height:auto;">
+
+              <div align="justify">
+                <div class="filtered">
+
+
+                  {{#content}}
+                  <p> {{text}}</p>
+                  {{/content}} {{^content}}
+                  <div align="center">
+                    <img src="/img/fortune.gif" width="50%" height="50%" align="middle" />
+                  </div>
+                  {{/content}}
+
+
+
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
 
 </body>
 
