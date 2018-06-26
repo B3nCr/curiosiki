@@ -185,7 +185,10 @@ border:1vw solid black; border-bottom:none; border-top:none;
   </script>
 </head>
 
-<body>
+
+/*KILL THIS IF BURN and replace <body> */
+<body OnLoad="document.SRCH.frmSearch.focus();">
+/*END*/
 
   <form method="POST">
     <div class="wrapper" style="height:100vh">
@@ -207,6 +210,11 @@ border:1vw solid black; border-bottom:none; border-top:none;
       </div>
 
       <div class="SRCH">
+
+
+/*KILL THIS IF BURNS*/
+<form name="SRCH">
+/*END*/
 
         <input type="text" name="frmSearch" style="font-family:'Montserrat', sans-serif !important; text-transform: uppercase; font-size: calc(4.6vmin + 0.4vmax); font-style: italic; font-weight: 900; 
     			border: 0pt; background-color: #000; color: #f0f0c3; text-indent: 10px; width: 99%; text-align: center; -webkit-appearance: none; appearance: none;
